@@ -8,7 +8,8 @@
 </head>
 <body>
     <main>
-        <a href="{{route('authors.list')}}">Top 10 Author</a>
+        <a href="{{route('authors.list')}}">Top 10 Author</a><br>
+        <a href="{{route('ratings.vote')}}">Rate Your Favorite Book</a>
         <div class="filter">
             <form action="{{route('books.filter')}}" method="post">
                 @csrf

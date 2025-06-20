@@ -8,6 +8,7 @@
 </head>
 <body>
     <main>
+        <a href="{{route('home')}}">Back</a>
         <center>
             <h1>Top 10 Most Famous Author</h1>
             <br>

@@ -34,4 +34,11 @@ class BookController extends Controller
 
         return view('books', compact('data'));
     }
+
+    public function filterBooksByAuthor($id)
+    {
+        $data = Book::where('author_id', $id)->select('id', 'book_name')->get();
+
+        return response()->json($data);
+    }
 }
