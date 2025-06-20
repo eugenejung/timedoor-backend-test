@@ -24,6 +24,7 @@ class RatingSeeder extends Seeder
                 'book_id' => fake()->randomElement($bookIds),
                 'author_id' => fake()->randomElement($authorIds),
                 'rating' => fake()->numberBetween(1, 10),
+                'voter' => fake()->numberBetween(0, 5000),
                 'created_at' => now(),
                 'updated_at' => now(),
             ];

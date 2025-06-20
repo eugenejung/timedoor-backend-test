@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Author extends Model
 {
     use HasFactory;
+
+    public function firstRating()
+    {
+        return $this->hasOne(Rating::class)->orderBy('id');
+    }
 }

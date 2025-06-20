@@ -21,6 +21,7 @@ class BookSeeder extends Seeder
         Book::factory()->count(100000)->make()->each(function ($book) use ($authorIds, $categoryIds) {
             $book->author_id = fake()->randomElement($authorIds);
             $book->category_id = fake()->randomElement($categoryIds);
+            $book->average_rating = fake()->randomFloat(1, 0, 10);
             $book->save();
         });
     }

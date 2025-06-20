@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('book_name');
             $table->unsignedBigInteger('category_id');
             $table->unsignedBigInteger('author_id');
+            $table->float('average_rating')->default('0.0');
             $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
             $table->foreign('author_id')->references('id')->on('authors')->onDelete('cascade');
             $table->timestamps();
